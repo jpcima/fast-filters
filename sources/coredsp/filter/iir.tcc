@@ -30,8 +30,8 @@ inline void IIR<N, V>::reset() {
   constexpr unsigned v = coreutil::simd_size<V>;
   constexpr unsigned nn = (N + v - 2) & ~(v - 1);
 
-  std::fill_n(x_, 2 * nn, 0);
-  std::fill_n(y_, 2 * nn, 0);
+  std::fill_n(x_.get(), 2 * nn, 0);
+  std::fill_n(y_.get(), 2 * nn, 0);
 }
 
 template <unsigned N, class V>
