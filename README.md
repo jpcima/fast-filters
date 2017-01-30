@@ -1,6 +1,8 @@
 # fast-filters
 Implementation of FIR and IIR filters optimized for SIMD processing
 
+This package provides filter classes built with C++ templates and a mix of intrinsics and GCC vector extensions. This allows the library to provide all SIMD variants with a single source code, however this limits support to the compilers which have the vector extensions, which are currently GCC and Clang.
+
 ## Benchmarks
 
 The following benchmarks have been computed on x86_64 Linux with Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz.
